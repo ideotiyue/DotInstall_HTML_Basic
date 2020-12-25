@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="discription" content="ドットインストール詳細HTML基礎文法編">
+    <link rel="icon" href="favicon.ico">
+    <title>ドットインストール</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="img/logo.png" width="300px" height="50px" alt="ドットインストールのロゴです">
+    </header>
+    
+    <nav>
+      <p>navタグはナビゲーションに使う</p>
+      <ul>
+        <li><a href="#sectionTag">区切りを示すタグ</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <h1>ドットインストール詳細HTML学習メモ</h1>
+      <h2>HTMLとは</h2>
+      <p>テキストの意味合いをマークアップする言語。装飾はCSSで行う。</p>
+      <hr>
+      
+      <section>
+        <h2>文字の強調</h2>
+        <p>strongタグは文字を強調することができます。<br>
+          これは
+          <strong>すごいサービスです！</strong>
+        </p>
+      </section>
+      
+      <section>
+        <h2 id="horizontialRule">段落を表す罫線</h2>
+        <p>hrタグは「horizontal rule（水平方向の罫線）」の略で、段落が変わることを示す水平の横線を引くためのタグです。</p>
+        <hr>
+      </section>
+  
+      <section>
+        <h2>引用文</h2>
+        <p>引用文はblockquoteタグで要素を囲みます。<br>
+          出典はcite属性を用いてURLを埋め込むことができます
+        </p>
+        <blockquote cite="https://dotinstall.com">
+          <p>ここに引用文が入ります</p>
+        </blockquote>
+      </section>
+  
+      <section>
+        <h2>文字実体参照</h2>
+        <p>HTMLで使う記号はそのまま書くことができないので、文字実体参照という仕組みを使います。<br>
+        小なり記号は&のあとにlt;、大なり記号は&のあとにgt;など、記号によって表記が異なります</p>
+        <hr>
+    
+        <h2>整形されたテキストをそのまま表示</h2>
+        <p>
+          改行や空白など整形されたテキストをそのまま表示するにはpreタグ（preformatted）を使う。<br> 
+          また、書いた文章がコードの場合はcodeタグを使うとよい。<br>
+          文字実体参照と組み合わせることで、コードを表示することが出来る
+        </p>
+        <pre>
+        <code>
+    &lt;p&gt;
+      いますぐに&lt;br&gt;
+      はじめてみよう&lt;br&gt;
+      HTML
+    &lt;/p&gt;
+        </code>
+        </pre>
+      </section>
+      <hr>
+  
+      <h2>順序なしリスト</h2>
+      <p>ulタグは順序が関係ないリストを作る時に使う</p>
+     <ul>
+      <li>うまい</li>
+      <li>やすい</li>
+      <li>はやい</li>
+    </ul>
+    <hr>
+  
+      <h2>順序有りリスト</h2>
+      <p>olタグは順序が関係あるリストを作る時に使う</p>
+      <ol>
+        <li>野菜を洗う</li>
+        <li>皮を剥く</li>
+        <li>炒める</li>
+      </ol>
+      <hr>
+  
+      <h2>説明リスト</h2>
+      <p>dlタグは項目と説明がペアになっているものをリストにする時に使う。<br>
+         項目はdtタグ、説明はddタグで囲う。
+      </p>
+      <dl>
+        <dt>項目A</dt>
+        <dd>説明A</dd>
+        <dt>項目B</dt>
+        <dd>説明B</dd>
+        <dt>項目C</dt>
+        <dd>説明C</dd>
+      </dl>
+      <hr>
+        
+      <h2 id="tableTag">表で使うタグ</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>タグ名</th>
+            <th>役割</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tr（table raw）</td>
+            <td>行を覆うタグ</td>
+          </tr>
+          <tr>
+            <td>th（table header）</td>
+            <td>見出しのセル</td>
+          </tr>
+          <tr>
+            <td>td（table data）</td>
+            <td>表のセルの中身</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+  
+      <h2>リンクの貼り方</h2>
+      <p><a href="https://dotinstall.com" target="_blank">リンクを張りたい文字列</a>にaタグを用いる。<br>
+        新しいタブで開く時は_target="blank"と記載する。
+      </p>
+      <hr>
+  
+      <h2>別ファイルへのリンクの貼り方</h2>
+      <p>ファイルの階層が同じ場合の練習<a href="practice1.html">ページ１</a><br>
+      ファイルの階層が異なる場合の練習<a href="lessons/pravtice2.html">ページ２</a>
+      </p>
+      <hr>
+  
+      <h2>ページ内リンクの張り方</h2>
+      <p>
+        href属性に#を用いて識別子をつけ、リンクさせたい箇所にidをつける。<br>
+        ページトップに戻すのは、HTMLの仕様でそう定められているので#topのみ指定でOK
+      </p>
+      <ul>
+        <li><a href="#horizontialRule">段落を表す罫線</a></li>
+        <li><a href="#top">ページトップ</a></li>
+      </ul>
+      <hr>
+      <h2 id="sectionTag">区切りを示すタグ</h2>
+      <img src="img/sectionTag.png" width="650px" height="350px">
+    </main>
+    
+    <aside>
+      <h2>アサイドタグ</h2>
+      <p>asideタグは広告など、コンテンツに関係ないものに使う</p>
+    </aside>
+
+    <section>
+      <h1>アーティクルタグ</h1>
+      <p>articleタグは外部に配信することを想定しているような独立したコンテンツに使います</p>
+      
+      <article>
+        <h2>記事のタイトル</h2>
+        <div style="background-color: antiquewhite;">
+          <p>お知らせ。お知らせ。お知らせ。お知らせ。お知らせ。お知らせ。</p>
+          <footer>投稿日：<time>2020-11-1</time>by @sachan</footer>
+        </div>
+      </article>
+      
+      <article>
+        <h2>記事のタイトル2</h2>
+        <p>お知らせ。<span style="color: brown;">spanタグを使うと一部文字色が変わるよ。</span>お知らせ。</p>
+        <footer>投稿日：<time>2020-11-1</time>by @sachan</footer>
+      </article>
+    </section>
+      
+    <footer>      
+      <li><a href="#top">ページトップ</a></li>
+    </footer>
+  </body>
+</html>
+
